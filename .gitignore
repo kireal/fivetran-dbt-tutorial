@@ -1,0 +1,3 @@
+.venv
+dbt.log
+log/*.log

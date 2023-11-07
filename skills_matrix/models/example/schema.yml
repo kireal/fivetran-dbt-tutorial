@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: skills_group_average
+    description: "Calculates average over skills matrix"
+    columns:
+      - name: skill_group
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
