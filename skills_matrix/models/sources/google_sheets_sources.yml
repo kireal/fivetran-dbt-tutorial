@@ -1,0 +1,12 @@
+# models/sources/google_sheets_sources.yml
+
+version: 2
+
+sources:
+  - name: google_sheets_bronze
+    database: hive_metastore
+    schema: google_sheets_bronze
+    tables:
+      - name: skills_matrix_raw
+        identifier: skills_matrix_raw
+        description: "Raw skills matrix data from Google Sheets"

@@ -11,7 +11,7 @@ with skills as (
         skill_group,
         round(avg(delivery), 2) as average_skill_value,
         count(*) as cnt_skilled
-    from google_sheets_bronze.skills_matrix_raw
+    from {{ source('google_sheets_bronze', 'skills_matrix_raw') }}
     where delivery <> 'NA'
     group by skill_group
 )
